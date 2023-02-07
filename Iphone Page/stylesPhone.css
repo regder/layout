@@ -34,6 +34,9 @@ a{
     justify-content: space-between;
     align-items: center;
 }
+.menu-btn{
+    display: none;
+}
 .menu{
     display: flex;  
     flex-grow: 1;
@@ -43,6 +46,8 @@ a{
     flex-grow: 1;
     flex-basis: 0;  
     text-align: right;
+    font-size: 24px;
+    line-height: 29px;
 }
 .menu-item{
     padding-right: 30px;
@@ -105,10 +110,14 @@ a{
 .Color{
     padding-bottom: 150px;
 }
+.color-item{
+    width: 50%;
+}
 .color-list{
     display: flex;
     justify-content: space-between;
     text-align: center;
+    flex-wrap: wrap;
 }
 .color-item img{
     margin-bottom: 20px;
@@ -189,4 +198,172 @@ a{
     font-size: 24px;
     line-height: 29px;
     font-weight: 400;
+}
+/* adaptive */
+@media (max-device-width:1200px){
+    .contact{
+        background-color: #574B63;
+    }
+    .headline-img{
+        max-width: 100%;
+    }
+    .inner{
+        display: block;        
+    }
+    .contact-form{
+        width: auto;
+    }
+    .contact-title{
+        text-align: center;
+    }
+    .contact-img{
+        width: 100%;
+    }
+}
+@media (max-device-width:1100px){
+    .color-list{
+        flex-wrap: wrap;
+    }
+    .color-item{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media (max-device-width:940px){
+    .images-news{
+        display: none;
+    }
+    .news-text p, .news-text b{
+        max-width: 100%;
+    }
+    .menu-btn{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        order: 1;
+        position: relative;
+        z-index: 50;
+    }
+    .logo, .phone{
+        position: relative;
+        z-index: 50;
+    }
+    .btn-line{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        height: 2px;
+        transition: .3s ease;
+    }
+    .btn-line:nth-child(1){
+        top:0;
+    }
+    .btn-line:nth-child(2){
+        top:20px;
+    }
+    .btn-line:nth-child(3){
+        top:20px;
+        
+    }
+    .btn-line:nth-child(4){
+        top:40px;
+    }
+    .menu-open .btn-line:nth-child(1){
+        transform: scaleX(0);
+    }
+    .menu-open .btn-line:nth-child(2){
+        transform: rotate(45deg);
+    }
+    .menu-open .btn-line:nth-child(3){
+        transform: rotate(-45deg);
+    }
+    .menu-open .btn-line:nth-child(4){
+        transform: scaleX(0);
+    }
+    .menu{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        transform: translateY(-100%);
+        background-color: #0A0A0A;  
+        transition: .3s;      
+    }
+    .menu-open .menu{
+        transform: translateY(0);
+        height: 100%;
+    }
+    .menu-item{
+        padding: 50px 0;
+        font-size: 56px;
+    }
+    .phone{
+        text-align: center;
+    }
+}
+@media(max-device-width:768px){
+    .headline, .news{
+        padding: 50px 0;
+    }
+    .Color{
+        padding-bottom: 50px;
+    }
+    .contact-form{
+        padding: 50px 90px ;
+    }
+}
+@media (max-device-width:640px){
+    .footer-inner{
+        flex-direction: column;
+        gap:15px;
+    }
+}
+@media (max-device-width:560px){    
+    .headline-title{
+        font-size: 34px;
+        line-height: 42px;
+    }
+    .headline-btn{        
+        font-size: 18px;
+        line-height: 22px;        
+        padding: 16px 90px 16px;
+    }
+    .headline-img{
+        max-width: 100%;
+    }
+    .news-title, .color-title, .contact-title{
+        font-size: 28px;
+        line-height: 32px;        
+    }
+    .color-item, .color-item img{
+        width: 100%;              
+    }  
+    .contact-form{
+        padding: 50px 50px;
+    }     
+}
+@media (max-device-width:420px){
+    .phone{
+        flex-basis: auto;
+        margin-top: 50px;
+        order: 3;
+        width: 100%;
+        font-size: 22px;
+    }
+    .nav{
+        flex-wrap: wrap;
+    }
+    .menu-item{
+        font-size: 32px;
+    }
 }

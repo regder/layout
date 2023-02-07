@@ -4,15 +4,22 @@
         <link rel="stylesheet" type="text/css" href="stylesPhone.css"/>
         <title>Iphone main page</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <!-- header -->
         <header class="header">
             <div class="container">
                 <nav class="nav">
+                    <button class="menu-btn" type="button">
+                        <span class="btn-line"></span>
+                        <span class="btn-line"></span>
+                        <span class="btn-line"></span>
+                        <span class="btn-line"></span>
+                    </button>
                     <ul class="menu">
                         <li class="menu-item">
                             <a class="menu-link" href="#">Что нового</a>
@@ -31,7 +38,11 @@
                 </nav>                
             </div>            
         </header>
+        
+        <!-- main -->
         <main class="main">
+
+            <!-- headline -->
             <section class="headline">
                 <div class="container">
                     <h1 class="headline-title">IPHONE 14 PRO</h1>
@@ -39,6 +50,8 @@
                     <a class="headline-btn" href="#">ВЫБРАТЬ</a>
                 </div>
             </section>
+
+            <!-- news -->
             <section class="news">
                 <div class="container">
                     <h2 class="news-title">Что нового</h2>
@@ -72,6 +85,8 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Color -->
             <section class="Color">
                 <div class="container">
                     <h2 class="color-title">ВЫБЕРИ СВОЙ ЦВЕТ</h2>
@@ -99,6 +114,8 @@
                     </ul>
                 </div>
             </section>
+
+            <!-- contact -->
             <section class="contact">
                 <div class="container">
                     <div class="inner">
@@ -109,11 +126,13 @@
                             <p>В ближайшее время наш менеджер свяжется с Вами</p>
                             <button type="submit">ЗАКАЗАТЬ</button>
                         </form>  
-                        <img src="pics/hero_endframe__cvklg0xk3w6e_large 1.jpg" alt="end"/>                       
+                        <img class="contact-img" src="pics/hero_endframe__cvklg0xk3w6e_large 1.jpg" alt="end"/>                       
                     </div>                                       
                 </div>
             </section>
         </main>
+
+        <!-- footer -->
         <div class="footer">
             <div class="container">
                 <div class="footer-inner">
@@ -125,5 +144,8 @@
                 </div>
             </div>
         </div>
+        <script src="js/main.js">
+            
+        </script>
     </body>
 </html>
